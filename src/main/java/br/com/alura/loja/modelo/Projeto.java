@@ -1,5 +1,6 @@
 package br.com.alura.loja.modelo;
 
+import com.google.gson.Gson;
 import com.thoughtworks.xstream.XStream;
 
 public class Projeto {
@@ -34,5 +35,9 @@ public class Projeto {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String toJson() {
+		return new Gson().toJson(this);
 	}
 }
